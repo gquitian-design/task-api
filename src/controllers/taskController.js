@@ -18,7 +18,7 @@ export async function getTasks(req, res, next) {
       }
     }
 
-    const tasks = await taskService.getAllTasks({ completed });
+    const tasks = await taskService.getAllTasks({ completed: parsedCompleted });
     res.json(tasks);
   }catch (error){
     next(error);
