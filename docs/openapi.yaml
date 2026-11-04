@@ -18,6 +18,14 @@ paths:
       summary: List all tasks
       tags:
         - Tasks
+      parameters:
+        - name: completed
+          in: query
+          required: false
+          description: Resourse id
+          schema:
+            type: boolean
+          example: true
       responses:
         '200':
           description: OK
