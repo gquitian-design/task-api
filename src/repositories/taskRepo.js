@@ -4,8 +4,7 @@ export async function findAll({ completed } = {}) {
   const where = {};
 
   if (completed !== undefined) {
-    const isCompleted = completed === true || completed === "true";
-    where.completed = isCompleted;
+    where.completed = completed;
   }
 
   return prisma.task.findMany({
